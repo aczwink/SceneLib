@@ -22,6 +22,10 @@ add_library(SceneLib SHARED ${SOURCE_FILES})
 target_include_directories(SceneLib PRIVATE include)
 target_link_libraries(SceneLib ${ACSTDLIB_LIBRARY} ${ACSTDLIBSTATIC_LIBRARY})
 
+set(CONVERTER_SOURCE_FILES src_converter/main.cpp src_converter/MainWindow.cpp)
+add_executable(SceneConverter ${CONVERTER_SOURCE_FILES})
+target_link_libraries(SceneConverter ${LIBS})
+
 
 #---INSTALLATION---
 
